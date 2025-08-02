@@ -1,0 +1,10 @@
+# Render部署配置文件
+services:
+  - type: web
+    name: solar-system-simulator
+    env: static
+    buildCommand: "echo 'Static site ready'"
+    staticPublishPath: "."
+    envVars:
+      - key: NODE_VERSION
+        value: 18

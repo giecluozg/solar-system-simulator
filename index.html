@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>太阳系模拟器 - 8大行星轨道动画</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="universe">
+        <!-- 标题和控制面板 -->
+        <header class="control-panel">
+            <h1>🪐 太阳系模拟器</h1>
+            <div class="controls">
+                <button id="playPauseBtn" class="btn primary">▶️ 播放</button>
+                <button id="speedBtn" class="btn secondary">⚡ 2x</button>
+                <button id="resetBtn" class="btn tertiary">🔄 重置</button>
+            </div>
+            <div class="info-panel">
+                <div id="planetInfo" class="planet-info">
+                    <h3>选择一个行星查看详情</h3>
+                    <p>悬停在行星上获取信息</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- 太阳系容器 -->
+        <div class="solar-system">
+            <!-- 太阳 -->
+            <div class="sun" title="太阳 - 我们的恒星">
+                <div class="sun-glow"></div>
+            </div>
+
+            <!-- 行星轨道和行星 -->
+            <!-- 水星 -->
+            <div class="orbit mercury-orbit">
+                <div class="planet mercury" data-planet="mercury" title="水星">
+                    <div class="planet-label">☿</div>
+                </div>
+            </div>
+
+            <!-- 金星 -->
+            <div class="orbit venus-orbit">
+                <div class="planet venus" data-planet="venus" title="金星">
+                    <div class="planet-label">♀</div>
+                </div>
+            </div>
+
+            <!-- 地球 -->
+            <div class="orbit earth-orbit">
+                <div class="planet earth" data-planet="earth" title="地球">
+                    <div class="planet-label">🌍</div>
+                    <div class="moon-orbit">
+                        <div class="moon" title="月球"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 火星 -->
+            <div class="orbit mars-orbit">
+                <div class="planet mars" data-planet="mars" title="火星">
+                    <div class="planet-label">♂</div>
+                </div>
+            </div>
+
+            <!-- 木星 -->
+            <div class="orbit jupiter-orbit">
+                <div class="planet jupiter" data-planet="jupiter" title="木星">
+                    <div class="planet-label">♃</div>
+                    <div class="jupiter-stripes"></div>
+                </div>
+            </div>
+
+            <!-- 土星 -->
+            <div class="orbit saturn-orbit">
+                <div class="planet saturn" data-planet="saturn" title="土星">
+                    <div class="planet-label">♄</div>
+                    <div class="saturn-rings"></div>
+                </div>
+            </div>
+
+            <!-- 天王星 -->
+            <div class="orbit uranus-orbit">
+                <div class="planet uranus" data-planet="uranus" title="天王星">
+                    <div class="planet-label">♅</div>
+                </div>
+            </div>
+
+            <!-- 海王星 -->
+            <div class="orbit neptune-orbit">
+                <div class="planet neptune" data-planet="neptune" title="海王星">
+                    <div class="planet-label">♆</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 信息面板 -->
+        <aside class="sidebar">
+            <h3>🌌 行星信息</h3>
+            <div id="planetDetails" class="planet-details">
+                <p>选择行星查看详细信息</p>
+            </div>
+            
+            <div class="legend">
+                <h4>图例</h4>
+                <div class="legend-item">
+                    <span class="legend-color sun-color"></span>
+                    <span>太阳</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-color mercury-color"></span>
+                    <span>水星</span>
+                </div>
+                <!-- 其他行星图例... -->
+            </div>
+        </aside>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
